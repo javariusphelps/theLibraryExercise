@@ -20,8 +20,8 @@ public class periodicals extends libraryItem {
         return issues;
     }
 
-    public void setIssues(int issues) {
-        this.issues = issues;
+    public int setIssues(int issues) {
+        return this.issues = issues;
     }
 
 }

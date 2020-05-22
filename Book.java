@@ -1,4 +1,4 @@
-public class Book extends libraryItem {
+public class Book extends libraryItem implements Readable {
 
     private String title;
     private int numberOfPages, chapters;
@@ -33,6 +33,11 @@ public class Book extends libraryItem {
 
     public void setChapters(int chapters) {
         this.chapters = chapters;
+    }
+
+    @Override
+    public void display() {
+        System.out.println("JP 10 pages left");
     }
 
 }

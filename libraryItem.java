@@ -1,4 +1,4 @@
-public class libraryItem {
+public class libraryItem implements Loanable {
 
     private String genre, author;
     private int copyright;
@@ -31,6 +31,33 @@ public class libraryItem {
 
     public void setCopyright(int copyright) {
         this.copyright = copyright;
+    }
+
+    @Override
+    public void lateCharge(Charges charge) {
+        switch (charge) {
+            case DAILY:
+                System.out.println("Charged: $1");
+                break;
+            case WEEKLY:
+                System.out.println("Charged: $7");
+                break;
+            case BIWEEKLY:
+                System.out.println("Charged: $14");
+                break;
+            case MONTHLY:
+                System.out.println("Charged: $30");
+                break;
+            default:
+                System.out.println("No Late Charges.");
+                break;
+        }
+    }
+
+    @Override
+    public void display() {
+        // TODO Auto-generated method stub
+
     }
 
 }

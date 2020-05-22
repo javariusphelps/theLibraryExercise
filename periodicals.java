@@ -1,4 +1,4 @@
-public class periodicals extends libraryItem implements Loanable {
+public class periodicals extends libraryItem {
 
     private int volumes, issues;
 
@@ -24,9 +24,4 @@ public class periodicals extends libraryItem implements Loanable {
         return this.issues = issues;
     }
 
-    @Override
-    public void display() {
-        System.out.println("Periodicals cannot be rented outside of library");
-
-    }
 }

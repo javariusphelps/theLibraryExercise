@@ -2,6 +2,7 @@ public class Author {
 
     public String lastName;
     public String firstName;
+    public PublishingCompany publishingCompany;
 
     public Author(String lastName, String firstName) {
         this.lastName = lastName;
@@ -23,6 +24,14 @@ public class Author {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
 
+    }
+
+    public PublishingCompany getPublishingCompany() {
+        return publishingCompany;
+    }
+
+    public void setPublishingCompany(PublishingCompany publishingCompany) {
+        this.publishingCompany = publishingCompany;
     }
 
 }

@@ -4,4 +4,6 @@ interface Loanable {
 
     void display();
 
+    void lateCharge(Charges charge);
+
 }

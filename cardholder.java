@@ -3,6 +3,8 @@ public class cardholder {
     private String name;
     private int age, yearjoined, bookscheckedout;
     private boolean reservedbooks;
+    private OverdueList<Book> overdueBooks;
+    private OverdueList<periodicals> overduePeriodicals;
 
     public cardholder(String name, int age, int yearjoined, int bookscheckedout, boolean reservedbooks) {
         this.name = name;
@@ -10,6 +12,8 @@ public class cardholder {
         this.yearjoined = yearjoined;
         this.bookscheckedout = bookscheckedout;
         this.reservedbooks = reservedbooks;
+        this.overdueBooks = new OverdueList<>();
+        this.overduePeriodicals = new OverdueList<>();
     }
 
     public String getName() {
